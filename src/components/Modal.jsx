@@ -6,7 +6,7 @@ const Modal = () => {
   const dispatch = useDispatch()
   return (
     <>
-      <section className="flex justify-center items-center h-screen w-screen fixed top-0 left-0 z-10">
+      <section className="flex justify-center items-center bg-black/80 h-screen w-screen fixed top-0 left-0 z-10">
         <div className="bg-slate-900 text-white shadow-md px-6 py-6 mx-4 md:w-1/3 flex flex-col justify-center items-center space-y-4 rounded-md">
           <h4 className="text-xl text-center font-medium">
             Remove all items from your shopping cart?{" "}
