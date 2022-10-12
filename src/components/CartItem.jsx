@@ -8,16 +8,16 @@ const CartItem = ({ id, img, price, title, amount }) => {
   const dispatch = useDispatch()
   return (
     <>
-      <article className="flex justify-between items-center border rounded-md relative ">
+      <article className="relative flex items-center justify-between rounded-md border ">
         <div className="flex space-x-2 px-2 py-2">
-          {/* <!-- Product Image Image --> */}
-          <img src={img} className="w-28 h-28  " alt={title} />
+          {/* <!-- Product Image --> */}
+          <img src={img} className="h-28 w-28  " alt={title} />
           {/* <!-- product details --> */}
           <div>
             <h2 className="text-xl">{title}</h2>
             <p className=" space-x-2">
               <span className="font-semibold">${price}</span>
-              <span className="text-gray-500 line-through font-normal text-sm">
+              <span className="text-sm font-normal text-gray-500 line-through">
                 3,495
               </span>
             </p>
@@ -25,9 +25,9 @@ const CartItem = ({ id, img, price, title, amount }) => {
         </div>
 
         {/* <!-- Value Button --> */}
-        <div className="flex space-x-4 md:px-6 py-2 ">
+        <div className="flex space-x-4 py-2 md:px-6 ">
           <button
-            className="hover:bg-gray-200/40 rounded-full px-1 py-1"
+            className="rounded-full px-1 py-1 hover:bg-gray-200/40"
             onClick={() => {
               if (amount === 1) {
                 dispatch(remove(id))
@@ -39,11 +39,11 @@ const CartItem = ({ id, img, price, title, amount }) => {
             {" "}
             <IoIosRemove />{" "}
           </button>
-          <p className="border px-2 bg-fuchsia-500 text-white rounded-md ">
+          <p className="rounded-md border bg-fuchsia-500 px-2 text-white ">
             {amount}
           </p>
           <button
-            className="hover:bg-gray-200/40 rounded-full px-1 py-1"
+            className="rounded-full px-1 py-1 hover:bg-gray-200/40"
             onClick={() => {
               dispatch(increase({ id }))
             }}
@@ -53,7 +53,7 @@ const CartItem = ({ id, img, price, title, amount }) => {
           </button>
         </div>
         <button
-          className="absolute top-2 text-gray-600 right-2 hover:text-black hover:bg-gray-200/40 px-1 py-1 rounded-full"
+          className="absolute top-2 right-2 rounded-full px-1 py-1 text-gray-600 hover:bg-gray-200/40 hover:text-black"
           onClick={() => {
             dispatch(remove(id))
           }}

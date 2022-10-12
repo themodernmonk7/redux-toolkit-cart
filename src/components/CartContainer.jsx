@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux"
 import { openModal } from "../feature/modal/modalSlice"
 import CartItem from "./CartItem"
 import Total from "./Total"
+
 const CartContainer = () => {
   const { cartItems, amount } = useSelector((state) => state.cart)
   const dispatch = useDispatch()
@@ -23,19 +24,18 @@ const CartContainer = () => {
   }
 
   return (
-    <section className="container mx-auto max-w-xl my-10 grid grid-cols-1 gap-4">
-      {/* <!-- item 1 --> */}
+    <section className="container mx-auto my-10 grid max-w-xl grid-cols-1 gap-4">
       {cartItems.map((item) => {
         return <CartItem key={item.id} {...item} />
       })}
       <Total />
 
       {/* <!-- place order button --> */}
-      <button className="bg-fuchsia-500 mx-6 py-4 uppercase font-semibold text-white rounded-sm shadow-lg border border-transparent hover:bg-fuchsia-500/95">
+      <button className="mx-6 rounded-sm border border-transparent bg-fuchsia-500 py-4 font-semibold uppercase text-white shadow-lg hover:bg-fuchsia-500/95">
         Place Order
       </button>
       <button
-        className="border uppercase bg-black text-white py-2 mx-6 rounded-sm shadow-md hover:bg-black/80"
+        className="mx-6 rounded-sm border bg-black py-2 uppercase text-white shadow-md hover:bg-black/80"
         onClick={() => {
           dispatch(openModal())
         }}

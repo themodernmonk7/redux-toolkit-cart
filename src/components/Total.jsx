@@ -7,7 +7,7 @@ const Total = () => {
     <>
       {/* <!-- total section --> */}
       <section>
-        <div className="px-6 uppercase font-semibold tracking-wide py-1 text-sm text-gray-800">
+        <div className="px-6 py-1 text-sm font-semibold uppercase tracking-wide text-gray-800">
           <p>
             Price details{" "}
             <span className="capitalize">
@@ -15,8 +15,8 @@ const Total = () => {
             </span>
           </p>
         </div>
-        <div className="flex justify-between py-2 border-y mx-6">
-          <div className="text-gray-800 flex flex-col justify-between tracking-wide w-full ">
+        <div className="mx-6 flex justify-between border-y py-2">
+          <div className="flex w-full flex-col justify-between tracking-wide text-gray-800 ">
             <p className="flex justify-between">
               <span> Total MRP</span>
               <span>${total}</span>
@@ -39,7 +39,7 @@ const Total = () => {
               <p>
                 {" "}
                 Convenience Fee{" "}
-                <span className=" text-fuchsia-500 font-normal text-sm">
+                <span className=" text-sm font-normal text-fuchsia-500">
                   {" "}
                   <a href="#"> Know More </a>
                 </span>{" "}
@@ -52,7 +52,7 @@ const Total = () => {
           </div>
         </div>
         {/* <!-- total --> */}
-        <div className="flex justify-between mx-6 font-normal  text-black text-lg">
+        <div className="mx-6 flex justify-between text-lg  font-normal text-black">
           <p className="">Total</p>
           <p className="">${total}</p>
         </div>

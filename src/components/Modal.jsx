@@ -6,14 +6,14 @@ const Modal = () => {
   const dispatch = useDispatch()
   return (
     <>
-      <section className="flex justify-center items-center bg-black/80 h-screen w-screen fixed top-0 left-0 z-10">
-        <div className="bg-slate-900 text-white shadow-md px-6 py-6 mx-4 md:w-1/3 flex flex-col justify-center items-center space-y-4 rounded-md">
-          <h4 className="text-xl text-center font-medium">
+      <section className="fixed top-0 left-0 z-10 flex h-screen w-screen items-center justify-center bg-black/80">
+        <div className="mx-4 flex flex-col items-center justify-center space-y-4 rounded-md bg-slate-900 px-6 py-6 text-white shadow-md md:w-1/3">
+          <h4 className="text-center text-xl font-medium">
             Remove all items from your shopping cart?{" "}
           </h4>
           <div className=" space-x-10">
             <button
-              className="uppercase border-2 border-blue-500 text-blue-500 px-3 rounded-sm tracking-wider"
+              className="rounded-sm border-2 border-blue-500 px-3 uppercase tracking-wider text-blue-500"
               onClick={() => {
                 dispatch(clearCart())
                 dispatch(closeModal())
@@ -22,7 +22,7 @@ const Modal = () => {
               Confirm
             </button>
             <button
-              className="uppercase border-2 border-red-500 px-3 rounded-sm text-red-500 tracking-wider"
+              className="rounded-sm border-2 border-red-500 px-3 uppercase tracking-wider text-red-500"
               onClick={() => {
                 dispatch(closeModal())
               }}

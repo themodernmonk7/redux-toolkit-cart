@@ -1,23 +1,24 @@
 import React from "react"
 import { useSelector } from "react-redux"
+
 const Navbar = () => {
   const { amount } = useSelector((state) => state.cart)
   return (
     <>
-      <nav className="bg-white flex justify-between container mx-auto  mt-5 px-2 md:px-8 py-4 rounded-lg shadow-md shadow-fuchsia-500/20">
+      <nav className="container mx-auto mt-5 flex justify-between  rounded-lg bg-white px-2 py-4 shadow-md shadow-fuchsia-500/20 md:px-8">
         <h2 className="text-3xl font-semibold text-black">
           Redux <span className="text-fuchsia-600">Toolkit</span>{" "}
         </h2>
 
-        <div className="px-7 flex space-x-8">
-          <button className="hover:text-fuchsia-600 relative">
+        <div className="flex space-x-6 px-7">
+          <button className="relative hover:text-fuchsia-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-9 h-9"
+              className="h-7 w-7"
             >
               <path
                 strokeLinecap="round"
@@ -25,7 +26,7 @@ const Navbar = () => {
                 d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
               />
             </svg>
-            <div className=" rounded-full text-center py-1 text-lg absolute -top-5 -right-4 left-4 bg-fuchsia-400 ">
+            <div className="  absolute -top-3 -right-2 rounded-full bg-fuchsia-400 py-1 px-2 text-center text-sm ">
               <p>{amount}</p>
             </div>
           </button>
@@ -37,7 +38,7 @@ const Navbar = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-8 h-8"
+              className="h-7 w-7"
             >
               <path
                 strokeLinecap="round"
